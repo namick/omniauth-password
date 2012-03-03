@@ -1,0 +1,16 @@
+<h1>Sign in</h1>
+
+<%= form_for(:sessions, url: "/auth/password/callback") do |f| %>
+  <div class="field">
+    <%= label_tag :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= label_tag :password %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Sign in" %>
+  </div>
+<% end %>
+

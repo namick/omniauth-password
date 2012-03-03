@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 3.2.1"
-  s.add_dependency "omniauth", "~> 1.0"
-  s.add_dependency "bcrypt-ruby", "~> 3.0"
+  s.add_runtime_dependency "omniauth", "~> 1.0"
+  s.add_runtime_dependency "bcrypt-ruby", "~> 3.0"
 
 
   s.add_development_dependency "sqlite3"

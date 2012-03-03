@@ -8,6 +8,17 @@
 </head>
 <body>
 
+  <div>
+  <% if current_user %>
+    Signed in as: <%= current_user.email %>
+    <%= link_to "Sign out", session_path("current"), method: "delete" %>
+  <% end %>
+  </div>
+
+<% flash.each do |key, value| %>
+  <div class="flash <%= key %>"><%= value %></div>
+<% end %>
+
 <%= yield %>
 
 </body>
