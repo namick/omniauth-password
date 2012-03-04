@@ -11,7 +11,7 @@
   <div>
   <% if current_user %>
     Signed in as: <%= current_user.email %>
-    <%= link_to "Sign out", session_path("current"), method: "delete" %>
+    <%= link_to "Sign out", session_path, method: "delete" %>
   <% end %>
   </div>
 

@@ -7,7 +7,7 @@ module OmniAuth
       option :login_field, :email
 
       def request_phase
-        redirect "/sessions/new"
+        redirect "/session/new"
       end
 
       def callback_phase
