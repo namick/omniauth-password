@@ -3,7 +3,7 @@ module OmniAuth
     class Password
       include OmniAuth::Strategy
 
-      option :model, nil # default set to 'User' below
+      option :user_model, nil # default set to 'User' below
       option :login_field, :email
 
       def request_phase
@@ -16,11 +16,11 @@ module OmniAuth
       end
 
       def user
-        @user ||= model.send("find_by_#{options[:login_field]}", login)
+        @user ||= user_model.send("find_by_#{options[:login_field]}", login)
       end
 
-      def model
-        options[:model] || ::User
+      def user_model
+        options[:user_model] || ::User
       end
 
       def login
